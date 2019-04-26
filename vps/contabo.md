@@ -36,3 +36,26 @@ Softlayer, Singapore, SG        119.81.28.170           7.27MB/s
 Softlayer, HongKong, CN         119.81.130.170          7.40MB/s
 ----------------------------------------------------------------------
 ```
+
+```
+fio-2.2.10
+Starting 1 process
+test: Laying out IO file(s) (1 file(s) / 1024MB)
+Jobs: 1 (f=1): [m(1)] [75.0% done] [206.7MB/72299KB/0KB /s] [52.9K/18.8K/0 iops] [eta 00m:01s]
+test: (groupid=0, jobs=1): err= 0: pid=8576: Fri Apr 26 11:56:19 2019
+  read : io=784996KB, bw=209836KB/s, iops=52458, runt=  3741msec
+  write: io=263580KB, bw=70457KB/s, iops=17614, runt=  3741msec
+  cpu          : usr=10.80%, sys=81.50%, ctx=1302, majf=0, minf=9
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued    : total=r=196249/w=65895/d=0, short=r=0/w=0/d=0, drop=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: io=784996KB, aggrb=209835KB/s, minb=209835KB/s, maxb=209835KB/s, mint=3741msec, maxt=3741msec
+  WRITE: io=263580KB, aggrb=70457KB/s, minb=70457KB/s, maxb=70457KB/s, mint=3741msec, maxt=3741msec
+
+Disk stats (read/write):
+  sda: ios=184931/63061, merge=0/48, ticks=45172/19772, in_queue=64888, util=96.81%
+```
